@@ -19,6 +19,7 @@ if (isset($_POST['name']) && (isset($_POST['pass'])))
     if($result)
     {
 	    $row = $result->fetch_array(MYSQLI_ASSOC);
+	    var_dump($row);
 	    if ($row['password'] === md5($pass))
 	    {
 		    echo "login success";
